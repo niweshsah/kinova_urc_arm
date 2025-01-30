@@ -108,3 +108,20 @@ This metapackage contains the auto-generated MoveIt! files to use the Kinova Gen
 
 ### third_party
 This folder contains the third-party packages we use with the ROS Kortex packages. Currently, it consists of two packages used for the simulation of the Robotiq Gripper in Gazebo. We use [gazebo-pkgs](third_party/gazebo-pkgs/README.md) for grasping support in Gazebo and [roboticsgroup_gazebo_plugins](third_party/roboticsgroup_gazebo_plugins/README.md) to mimic joint support in Gazebo.
+
+## Teleoperation Instructions
+
+### Gazebo Simulation
+To launch the Kinova Gen3 7-DOF arm in Gazebo and enable teleoperation, run:
+```
+roslaunch kortex_gazebo spawn_kortex_robot.launch
+roslaunch kortex_examples urc_kinova.launch
+```
+
+### Real Robot
+To launch the Kinova Gen3 7-DOF arm for real-world teleoperation, run:
+```
+roslaunch kortex_driver kortex_driver.launch
+roslaunch kortex_examples urc_kinova.launch
+```
+
