@@ -112,7 +112,7 @@ This folder contains the third-party packages we use with the ROS Kortex package
 ## Teleoperation Instructions
 
 ### Gazebo Simulation
-To launch the Kinova Gen3 7-DOF arm in Gazebo and enable teleoperation, run:
+To launch the Kinova Gen3 7-DOF arm in Gazebo and enable teleoperation (You can update the script accordingly,this was only for testing and teleop was quite slow for unknown reason), run:
 ```
 roslaunch kortex_gazebo spawn_kortex_robot.launch
 roslaunch kortex_examples urc_kinova.launch
