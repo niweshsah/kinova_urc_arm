@@ -30,6 +30,8 @@ def move_robot(move_group, dx=0.0, dy=0.0, dz=0.0):
     move_group.clear_pose_targets()
 
     rospy.loginfo(f"Moved to: {move_group.get_current_pose().pose}")
+    
+
 
 # Class for Virtual Joystick control
 class VirtualJoystick:
@@ -52,6 +54,8 @@ class VirtualJoystick:
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
         self.root.after(100, self.update_robot_motion)
         self.root.mainloop()
+
+
 
     def drag_knob(self, event):
         x, y = event.x, event.y
@@ -86,6 +90,7 @@ class VirtualJoystick:
     def on_close(self):
         self.root.destroy()
         sys.exit(0)
+
 
 # Keyboard press handler for Z-axis movement
 def on_press(key, move_group):

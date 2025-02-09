@@ -29,6 +29,8 @@ class ExampleMoveItTrajectories(object):
         else:
             self.is_init_success = True
 
+
+
     def get_cartesian_pose(self):
         return self.arm_group.get_current_pose().pose
 
